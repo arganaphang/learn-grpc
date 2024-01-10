@@ -7,7 +7,7 @@ gen-api:
     ./user/user.proto
 
 run-server:
-  cd server ; poetry shell ; python main.py
+  cd server ; python main.py
 
 gen-server:
   cd server ; python -m grpc_tools.protoc -I./user --python_out=./user --pyi_out=./user --grpc_python_out=./user ./user/user.proto
